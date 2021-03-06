@@ -25,20 +25,25 @@ public class PhotoQuiz {
 
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
-		// “Copy Image Address”)
-
+		// â€œCopy Image Addressâ€�)
+		String Url = "http://clipart-library.com/images/zTX5ajdpc.jpg";  
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component c=createImage(Url);  
 		// 3. use the "createImage()" method below to initialize your Component
-
+		 
 		// 4. add the image to the quiz window
-
+		quizWindow.add(c); 
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		String Answer = JOptionPane.showInputDialog(null, "Is this a cool picture?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+		if (Answer.equalsIgnoreCase("Yes")) {
+		JOptionPane.showMessageDialog(null, "That is correct");
+		}else {
+		JOptionPane.showMessageDialog(null, "That is incorrect");
+		}
+		 
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
