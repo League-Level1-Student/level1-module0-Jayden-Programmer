@@ -51,12 +51,20 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
+		int score = 0;
 
-		// 2. Set the size of the window in the initializeGui() method 
-
+		// 2. Set the size of the window in the initializeGui() method
+		JFrame frame = new JFrame();
+		frame.setSize(500, 500);
 		// 4. Ask the user who this person is and store their answer
 		String guess = JOptionPane.showInputDialog("who is this?");
-
+		if (guess.equalsIgnoreCase("Arnold")) {
+			JOptionPane.showMessageDialog(null, "Correct!");
+			score += 1;
+		} else {
+			score -= 1;
+			JOptionPane.showMessageDialog(null, "That is incorrect");
+		}
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 
@@ -65,7 +73,39 @@ public class BodyPartQuiz {
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+		 guess = JOptionPane.showInputDialog(null, "who is this?");
+		 if (guess.equalsIgnoreCase("Leonardo")) {
+		 score += 1;
+		 JOptionPane.showMessageDialog(null, "That is correct!");
+		} else {
+		score -= 1;
+		JOptionPane.showMessageDialog(null, "That is incorrect");
+		}
+		showNextImage(); 
+		guess = JOptionPane.showInputDialog(null, "who is this?");
+		if (guess.equalsIgnoreCase("Morgan Freeman")) { 	
+		score+=1; 
+		JOptionPane.showMessageDialog(null, "Correct!");
+		} else {
+		score-=1; 
+		JOptionPane.showMessageDialog(null, "That is incorrect");
+		}
+		showNextImage(); 
+		guess = JOptionPane.showInputDialog(null, "who is this?");
+		if (guess.equalsIgnoreCase("Jack Black")) {
+		score+=1; 
+		JOptionPane.showMessageDialog(null, "Correct!");
+		} else {
+		score-=1; 
+		JOptionPane.showMessageDialog(null, "That is incorrect");
+		}
+		if (score>3) {
+		JOptionPane.showMessageDialog(null, "Your score is " + score + " Good Job!");
+		}	
+		if(score<2) {
+		JOptionPane.showMessageDialog(null, "Your score is " + score + " Pathetic");
+		}
+		
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
@@ -91,7 +131,7 @@ public class BodyPartQuiz {
 		JLabel imageLabel = loadImage(firstImage);
 		imageList.add(imageLabel);
 		imageLabel = loadImage(secondImage);
-		imageList.add(imageLabel);
+		imageList.add(imageLabel);				 
 		imageLabel = loadImage(thirdImage);
 		imageList.add(imageLabel);
 		imageLabel = loadImage(fourthImage);

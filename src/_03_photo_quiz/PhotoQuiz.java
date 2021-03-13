@@ -53,7 +53,7 @@ public class PhotoQuiz {
 		// of code)
 
 		// 11. add the second image to the quiz window
-
+		JFrame frame = new JFrame(); 
 		// 12. pack the quiz window
 
 		// 13. ask another question

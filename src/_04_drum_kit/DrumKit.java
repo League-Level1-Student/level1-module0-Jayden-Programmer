@@ -60,6 +60,7 @@ public class DrumKit implements MouseListener {
 		drumLabelWithImage.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
+		JFrame frame1 = new JFrame(); 
 		
 	}
 
@@ -82,7 +83,7 @@ public class DrumKit implements MouseListener {
 		}
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
-
+ 
 	}
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
